@@ -1,0 +1,67 @@
+1. finding similar players - knn
+
+2. topping the charts -
+
+3. 1v1 player comparison
+
+4. player analysis
+
+
+2. topping the charts
+show seperate tables of the required parameters (use streamlit table) 
+sub heading - {parameter}
+have to create sub_df for each parameters using a for loop and print it 
+{ Sno,Name,stat,team}
+
+3.1v1 player comparison
+ find required parameters for each position,create a sub_df for each position,plot the 1v1 graphs
+
+4. single player analysis
+   radar plot(attacking, passing, defending stats),
+   
+
+topping charts
+
+1v1 player comparison (arpith/nanda)
+
+single player analysis (arpith/nanda) (last half- aashish)
+
+finding similar players(knn) - aashish
+
+
+parameters to compare	
+
+1.topping charts(all season stat)
+
+games played, minutes played, goals, assists, yellow cards, red cards, xg, xga,total shots taken,shots on target%, goals per shot on target, passes completed,pass percentage, long balls, passes into final third, progressive passes,crosses, shot creating actions, goal creating actions,tackles , interceptions, interceptions + tackles,clearance,dribbles completed,dribbles completed percentage,offside,aerial duels won, aerial dues won %
+
+
+2.1v1 player comparison 
+  radar plot :
+ fwdparam - gp90,ap90,xgp90,xgap90,shots on target,goals per shot on target,shotsp90,dribbles completed p90, goal creating actions p90
+
+ midparam - ap90,xgap90, pass completedp90,pass percentage, long ballsp90, passes into final thirdp90, progressive passesp90, shot creating actionsp90, tackles+ interceptions
+
+cbparam- passes completedp90, long balls, progressive passesp90,tackles, clearance, aerial duels won%,
+
+fbparam - passes completedp90, long balls, progressive passesp90,tackles, clearance, aerial duels won%, crossesp90
+
+3.single player analysis 
+
+fwd:
+radar plot : 
+	gp90,ap90,xgp90,xgap90,shots on target,goals per shot on target,shotsp90,dribbles completed p90, goal 	creating actions p90
+Heat map : shot data with xg
+
+ mid - ap90,xgap90, pass completedp90,pass percentage, long ballsp90, passes into final thirdp90, progressive passesp90, shot creating actionsp90, tackles+ interceptions
+
+cb- passes completedp90, long balls, progressive passesp90,tackles, clearance, aerial duels won%,
+
+fb- passes completedp90, long balls, progressive passesp90,tackles, clearance, aerial duels won%, crossesp90
+
+Scatter plot :
+	
+
+
+
+sep- end
