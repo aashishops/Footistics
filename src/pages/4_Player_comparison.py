@@ -8,15 +8,15 @@ st.set_page_config(
 
 
 # Sample DataFrames and dictionary for testing
-fb_df=pd.read_csv(r"FInal_DF\fb.csv")
-dm_df=pd.read_csv(r"FInal_DF\dm.csv")
-gk_df=pd.read_csv(r"FInal_DF\gk.csv")
-cm_df=pd.read_csv(r"FInal_DF\cm.csv")
-am_df=pd.read_csv(r"FInal_DF\am.csv")
-striker_df=pd.read_csv(r"FInal_DF\strikers.csv")
-cb_df=pd.read_csv(r"FInal_DF\cb.csv")
-wi_df=pd.read_csv(r"FInal_DF\wi.csv")
-ps_df=pd.read_csv(r"2022_2023 Top 5 leagues Data\position.csv")
+fb_df=pd.read_csv(r"FInal_DF/fb.csv")
+dm_df=pd.read_csv(r"FInal_DF/dm.csv")
+gk_df=pd.read_csv(r"FInal_DF/gk.csv")
+cm_df=pd.read_csv(r"FInal_DF/cm.csv")
+am_df=pd.read_csv(r"FInal_DF/am.csv")
+striker_df=pd.read_csv(r"FInal_DF/strikers.csv")
+cb_df=pd.read_csv(r"FInal_DF/cb.csv")
+wi_df=pd.read_csv(r"FInal_DF/wi.csv")
+ps_df=pd.read_csv(r"2022_2023 Top 5 leagues Data/position.csv")
 # Create a dictionary to map player positions to their respective DataFrames
 position_to_df = {
     'Right-Back': fb_df,
