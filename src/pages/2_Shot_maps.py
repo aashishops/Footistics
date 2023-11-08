@@ -31,13 +31,15 @@ selected_player = st.sidebar.selectbox("Select a player:", players)
 
 st.title("Football Pitch Visualizations")
 
-ax = create_full_pitch(x_lims, y_lims, background_color="#0E1117", line_color="white", line_width=2.0)
+ax = create_full_pitch(x_lims=[0, 1.15], y_lims=[0, 0.74], background_color=background_color, line_color=line_color, line_width=line_width)
+
 
 plot_scatterplot(ax, full_pitch_shots_df, selected_player)
 
 st.pyplot(plt)
 
-ax = create_full_pitch(x_lims, y_lims, background_color="#0E1117", line_color="white", line_width=2.)
+ax = create_full_pitch(x_lims=[0, 1.15], y_lims=[0, 0.74], background_color=background_color, line_color=line_color, line_width=line_width)
+
 
 plot_kdeplot(ax,full_pitch_shots_df, selected_player)
 
