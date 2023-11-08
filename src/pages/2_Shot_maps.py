@@ -59,9 +59,9 @@ background_color = "#0E1117"
 line_color = "white"  
 line_width = 2.0  
 
-
+data = shots_df[shots_df["player"] == selected_player]
 ax = create_full_pitch(x_lims=[0, 1.15], y_lims=[0, 0.74], background_color=background_color, line_color=line_color, line_width=line_width)
-sns.scatterplot(x="X", y="Y", data=shots_df[shots_df["player"] == selected_player], size="xG", ax=ax)
+sns.scatterplot(x="X", y="Y", data=data, size="xG", ax=ax)
 
 st.pyplot(plt)
 
