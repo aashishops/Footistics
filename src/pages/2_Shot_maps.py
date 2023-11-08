@@ -3,7 +3,7 @@ from copy import deepcopy
 import matplotlib.pyplot as plt
 import streamlit as st
 from Shot_map import create_full_pitch, plot_scatterplot, plot_kdeplot
-
+import seaborn as sns
 # Load your shot data here
 shots_df = pd.read_csv(r'FInal_DF/player_shots2022_2023.csv')
 
@@ -33,7 +33,7 @@ st.title("Football Pitch Visualizations")
 
 ax = create_full_pitch(x_lims, y_lims, background_color="#0E1117", line_color="white", line_width=2.0)
 
-plot_scatterplot(ax, full_pitch_shots_df, selected_player)
+sns.scatterplot(x="X", y="Y", data=shots_df[shots_df["player"] == selected_player], size="xG", ax=ax)
 
 st.pyplot(plt)
 
