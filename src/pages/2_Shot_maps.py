@@ -5,7 +5,7 @@ import streamlit as st
 from Shot_map import create_full_pitch, plot_scatterplot, plot_kdeplot
 
 # Load your shot data here
-shots_df = pd.read_csv(r'FInal_DF\player_shots2022_2023.csv')
+shots_df = pd.read_csv(r'FInal_DF/player_shots2022_2023.csv')
 
 pitch_width = 105  
 pitch_length = 68  
