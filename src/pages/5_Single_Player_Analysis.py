@@ -17,7 +17,7 @@ am_df=pd.read_csv(r"FInal_DF/am.csv")
 striker_df=pd.read_csv(r"FInal_DF/strikers.csv")
 cb_df=pd.read_csv(r"FInal_DF/cb.csv")
 wi_df=pd.read_csv(r"FInal_DF/wi.csv")
-ps_df=pd.read_csv(r"2022_2023 Top 5 leagues Data/position.csv")
+ps_df=pd.read_csv(r"Web scrapping/Final Data/position.csv")
 # Create a dictionary to map player positions to their respective DataFrames
 position_to_df = {
     'Right-Back': fb_df,
