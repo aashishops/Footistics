@@ -6,7 +6,7 @@ from Scout_player import find_and_plot_similar_players
 st.title("Find Similar Players")
 
 
-data_file = r"E:\2nd year\3rd sem\Data science\Project\FInal_DF\wi.csv"  
+data_file = r"FInal_DF/wi.csv"  
 player_df = pd.read_csv(data_file)
 player_names = player_df['Player'].tolist()
 player_name = st.sidebar.selectbox("Select a player:", player_names)
