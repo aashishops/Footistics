@@ -1,7 +1,6 @@
-import pandas as pd
 import plotly.express as px
-
-# Assuming you have a DataFrame called ps_df and a dictionary position_to_df
+import pandas as pd
+import streamlit as st
 
 def single_player_comparison(player_name, ps_df, position_to_df):
     # Search for the player's position in ps_df
@@ -18,7 +17,13 @@ def single_player_comparison(player_name, ps_df, position_to_df):
             player_data = player_df[player_df['Player'] == player_name]
 
             if not player_data.empty:
-                player_data = player_data.drop(columns=['Position', 'Unnamed: 0'])  # Exclude unnecessary columns
+                player_data = player_data.drop(columns=['Position', 'Unnamed: 0', '90s'])  # Exclude unnecessary columns
+
+               
+
+                # Print the DataFrame
+                st.write(player_data)
+
                 player_comp = pd.melt(player_data, id_vars=['Player'], value_vars=player_data.columns[1:], var_name='Stat')
 
                 # Create a radar plot using Plotly Express
@@ -65,9 +70,13 @@ def player_vs_player_comparison(player1_name, player2_name, ps_df, position_to_d
 
                 if not player1_data.empty and not player2_data.empty:
                     # Exclude unnecessary columns
-                    player1_data = player1_data.drop(columns=['Position', 'Unnamed: 0'])
-                    player2_data = player2_data.drop(columns=['Position', 'Unnamed: 0'])
+                    player1_data = player1_data.drop(columns=['Position', 'Unnamed: 0','90s'])
+                    player2_data = player2_data.drop(columns=['Position', 'Unnamed: 0','90s'])
                     player_data = pd.concat([player1_data, player2_data], ignore_index=True)
+                    st.write(player_data)
+
+                   
+                    
 
                     # Melt the data for both players to create a DataFrame suitable for plotting
                     player_comp = pd.melt(player_data, id_vars=['Player'], value_vars=player1_data.columns[1:], var_name='Stat')
@@ -96,4 +105,3 @@ def player_vs_player_comparison(player1_name, player2_name, ps_df, position_to_d
 
                     # Show the radar plot
                     return fig
-

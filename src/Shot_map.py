@@ -10,7 +10,7 @@ import streamlit as st
 
 
 
-def create_full_pitch(x_lims, y_lims, background_color="#0E1117", line_color="white", line_width=2.):
+def create_full_pitch(x_lims, y_lims, background_color="#0E1117", line_color="white", line_width=2.0):
     x_mid = x_lims[1] / 2
     y_mid = y_lims[1] / 2
 
