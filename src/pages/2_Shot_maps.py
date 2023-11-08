@@ -44,24 +44,4 @@ ax = create_full_pitch(x_lims=[0, 1.15], y_lims=[0, 0.74], background_color=back
 plot_kdeplot(ax,full_pitch_shots_df, selected_player)
 
 st.pyplot(plt)
-########3###############################
-import pandas as pd
-
-data = pd.DataFrame({
-    "X": [0.5, 0.3, 0.7, 0.9, 0.4],
-    "Y": [0.6, 0.4, 0.2, 0.8, 0.5],
-    "xG": [0.7, 0.5, 0.6, 0.8, 0.4]
-})
-
-pitch_width = 105  
-pitch_length = 68  
-background_color = "#0E1117"  
-line_color = "white"  
-line_width = 2.0  
-
-data = shots_df[shots_df["player"] == selected_player]
-ax = create_full_pitch(x_lims=[0, 1.15], y_lims=[0, 0.74], background_color=background_color, line_color=line_color, line_width=line_width)
-sns.scatterplot(x="X", y="Y", data=data, size="xG", ax=ax)
-
-st.pyplot(plt)
 
