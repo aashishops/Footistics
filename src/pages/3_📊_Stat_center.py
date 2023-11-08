@@ -9,7 +9,7 @@ st.set_page_config(
 st.title("Stats Center")
 
 # File path to your CSV data
-Top_charts_path = r'e:\2nd year\3rd sem\Data science\Project\FInal_DF\Topping_the_charts.csv'
+Top_charts_path = r'FInal_DF\Topping_the_charts.csv'
 
 # Create the Plotly figure
 fig = top_players_table(Top_charts_path)
