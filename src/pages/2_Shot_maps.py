@@ -31,23 +31,14 @@ selected_player = st.sidebar.selectbox("Select a player:", players)
 
 st.title("Football Pitch Visualizations")
 
-# Create the pitch
 ax = create_full_pitch(x_lims, y_lims, background_color="#0E1117", line_color="white", line_width=2.0)
-st.pyplot(plt)
-# Plot scatterplot for the selected player
+
 plot_scatterplot(ax, full_pitch_shots_df, selected_player)
 
-# Display the scatterplot in Streamlit
 st.pyplot(plt)
 
-ax = create_full_pitch(x_lims, y_lims, background_color="#0E1117", line_color="white", line_width=2.0)
-st.pyplot(plt)
-# Create a new pitch
 ax = create_full_pitch(x_lims, y_lims, background_color="#0E1117", line_color="white", line_width=2.)
 
-# Plot kdeplot for the selected player
 plot_kdeplot(ax,full_pitch_shots_df, selected_player)
-
-
 
 st.pyplot(plt)
