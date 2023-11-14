@@ -29,7 +29,7 @@ players = full_pitch_shots_df["player"].unique()
 # Use st.sidebar.selectbox to place it in the sidebar
 selected_player = st.sidebar.selectbox("Select a player:", players)
 
-st.title("Football Pitch Visualizations")
+st.title("Shot Maps")
 
 ax = create_full_pitch(x_lims, y_lims, background_color=background_color, line_color=line_color, line_width=line_width)
 
