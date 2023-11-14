@@ -15,13 +15,13 @@ line_width = 2.0
 
 x_lims = [0, 1.15]
 y_lims = [0, 0.74]
-
 x_mid = x_lims[1] / 2
 y_mid = y_lims[1] / 2
 
 full_pitch_shots_df = deepcopy(shots_df)
 full_pitch_shots_df["X"] = full_pitch_shots_df["X"].multiply(x_lims[1])
 full_pitch_shots_df["Y"] = full_pitch_shots_df["Y"].multiply(y_lims[1])
+
 
 # Create a list of unique players from your data
 players = full_pitch_shots_df["player"].unique()
@@ -31,10 +31,10 @@ selected_player = st.sidebar.selectbox("Select a player:", players)
 
 st.title("Football Pitch Visualizations")
 
-ax = create_full_pitch(x_lims=[0, 1.15], y_lims=[0, 0.74], background_color=background_color, line_color=line_color, line_width=line_width)
+ax = create_full_pitch(x_lims, y_lims, background_color=background_color, line_color=line_color, line_width=line_width)
 
 
-sns.scatterplot(x="X", y="Y", data=shots_df[shots_df["player"] == selected_player], size="xG", ax=ax)
+plot_scatterplot(ax,full_pitch_shots_df, selected_player)
 
 st.pyplot(plt)
 
