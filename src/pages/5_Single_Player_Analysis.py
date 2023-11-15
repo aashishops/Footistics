@@ -1,7 +1,7 @@
 from comparison import single_player_comparison
 import pandas as pd
 import streamlit as st 
-from abbrevation import fb,dm,gk,cm,am,striker,cb,wi,position_to_abbreviations
+from abbrevation import fb,dm,gk,cm,am,striker,cb,wi,position_to_abbrevations
 st.set_page_config(
     page_title="Footistcs",
     page_icon="⚽",
