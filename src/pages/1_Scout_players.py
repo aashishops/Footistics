@@ -39,8 +39,9 @@ player_position = ps_df.loc[ps_df["Player"] == player_name, "Position"].iloc[0]
 
 abbreviation_dict = position_to_abbrevations.get(player_position, {})
 
+st.write(position_to_df)
 if player_name:
-    similar_players, radar_plot = find_and_plot_similar_players(position_to_df, player_name)
+    similar_players, radar_plot = find_and_plot_similar_players(ps_df, player_name)
     
     col1, col2 = st.columns(2)
     with col1:
