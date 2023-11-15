@@ -48,11 +48,12 @@ player_position = ps_df.loc[ps_df["Player"] == player_name, "Position"].iloc[0]
 # Get the corresponding abbreviation dictionary for the player's position
 abbreviation_dict = position_to_df.get(player_position, {})
 
-# Print the abbreviation dictionary in a readable format
-st.write(f"Abbreviations for {player_position}:\n")
-for key, value in abbreviation_dict.items():
-    st.write(f"{key} - {value}")
 
 # Perform the rest of your code for single player comparison
 fig = single_player_comparison(player_name, ps_df, position_to_df)
 st.plotly_chart(fig)
+
+# Print the abbreviation dictionary in a readable format
+st.write(f"Abbreviations for {player_position}:\n")
+for key, value in abbreviation_dict.items():
+    st.write(f"{key} - {value}")
