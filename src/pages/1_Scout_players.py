@@ -43,8 +43,8 @@ position_df = position_to_df.get(player_position)
 abbreviation_dict = position_to_abbrevations.get(player_position, {})
 
 if player_name and position_df is not None:
-    similar_players, radar_plot = find_and_plot_similar_players(position_df, ps_df, player_name)
-    st.write(position_df)
+    similar_players, radar_plot = find_and_plot_similar_players(position_df, player_name)
+
     col1, col2 = st.columns(2)
     with col1:
         st.write("Similar players:")
