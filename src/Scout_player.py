@@ -3,12 +3,16 @@ import plotly.express as px
 from sklearn.preprocessing import StandardScaler
 from sklearn.neighbors import NearestNeighbors
 
-def find_and_plot_similar_players(data_file, player_name, k=5):
-    # Load your DataFrame with player stats
+def find_and_plot_similar_players(player_df, player_name, k=5):
+    # Check if "Position" column exists in the DataFrame
+    if "Position" in player_df.columns:
+        # Drop the "Position" column
+        player_df = player_df.drop("Position", axis=1, errors='ignore')
 
-    # Remove the "Position" and "Unnamed: 0" columns from the DataFrame
-    player_df = player_df.drop("Position", axis=1)
-    player_df = player_df.drop("Unnamed: 0", axis=1)
+    # Check if "Unnamed: 0" column exists in the DataFrame
+    if "Unnamed: 0" in player_df.columns:
+        # Drop the "Unnamed: 0" column
+        player_df = player_df.drop("Unnamed: 0", axis=1, errors='ignore')
 
     # Exclude non-numeric columns like player names
     numeric_columns = player_df.select_dtypes(include=['number'])
