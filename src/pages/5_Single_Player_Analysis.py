@@ -1,8 +1,8 @@
 from comparison import single_player_comparison
 import pandas as pd
 import streamlit as st 
-from abbrevation import fb,dm,gk,cm,am,striker,cb,wi
-from abbrevation import position_to_abbreviations
+from abbrevation import fb,dm,gk,cm,am,striker,cb,wi,position_to_abbrevations
+
 
 st.set_page_config(
     page_title="Footistcs",
@@ -46,7 +46,7 @@ with st.sidebar:
 # Get the player's position from the DataFrame
 player_position = ps_df.loc[ps_df["Player"] == player_name, "Position"].iloc[0]
 
-abbreviation_dict = position_to_abbreviations.get(player_position, {})
+abbreviation_dict = position_to_abbrevations.get(player_position, {})
 
 # Perform the rest of your code for single player comparison
 fig = single_player_comparison(player_name, ps_df, position_to_df)
