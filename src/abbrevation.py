@@ -1,4 +1,4 @@
-fb_df = {
+fb = {
     'BTklInt': 'Ball Tackles and Interceptions',
     'CTkl%': 'Successful Tackle Percentage',
     'PTCrs': 'Crosses from Penalty Area',
@@ -16,7 +16,7 @@ fb_df = {
     'PrgR': 'Progressive Passes Received'
 }
 
-dm_df = {
+dm = {
     'TCmp': 'Total Passes Completed',
     'LFTP': 'Final Third Passes',
     'LPrgP': 'Passes into the Final Third',
@@ -34,7 +34,7 @@ dm_df = {
     'ADWonp': 'Aerial Duels Won Percentage'
 }
 
-gk_df = {
+gk = {
     'PSxG': 'Post-Shot Expected Goals',
     'PSxG/SoT': 'Post-Shot xG per Shot on Target',
     'PSxG-GA_p90': 'Post-Shot xG - Goals Against per 90',
@@ -55,7 +55,7 @@ gk_df = {
     'PKsv': 'Penalty Saves'
 }
 
-cm_df = {
+cm = {
     'TCmp': 'Total Passes Completed',
     'LFTP': 'Final Third Passes',
     'LPrgP': 'Passes into the Final Third',
@@ -71,7 +71,7 @@ cm_df = {
     'PTTB': 'Passes to Target in Box'
 }
 
-am_df = {
+am = {
     'TCmp': 'Total Passes Completed',
     'LFTP': 'Final Third Passes',
     'LPrgP': 'Passes into the Final Third',
@@ -93,7 +93,7 @@ am_df = {
     'PTTB': 'Passes to Target in Box'
 }
 
-striker_df = {
+striker = {
     'xAG_p90': 'Expected Assists per 90',
     'LPPA': 'Passes into the Penalty Area',
     'CaCPA': 'Chances Created from Penalty Area',
@@ -117,7 +117,7 @@ striker_df = {
     'Live': 'Live-Ball Actions'
 }
 
-cb_df = {
+cb = {
     'BTklInt': 'Ball Tackles and Interceptions',
     'CTkl': 'Total Tackles',
     'TCmp': 'Total Passes Completed',
@@ -139,7 +139,7 @@ cb_df = {
     'ADWon': 'Aerial Duels Won'
 }
 
-wi_df = {
+wi = {
     'PTCrs': 'Penalty Area Crosses',
     'PTTB': 'Passes to Target in Box',
     'LxA': 'Assists from Live-Ball Passes',
@@ -161,35 +161,19 @@ wi_df = {
     'Off': 'Offsides'
 }
 
-# Create a dictionary to map player positions to their respective DataFrames
-position_to_df = {
-    'Right-Back': fb_df,
-    'Left-Back': fb_df,
-    'Left WingBack': fb_df,
-    'Right WingBack': fb_df,
-    'Defensive Midfield': dm_df,
-    'Goalkeeper': gk_df,
-    'Central Midfield': cm_df,
-    'Attacking Midfield': am_df,
-    'Centre-Forward': striker_df,
-    'Second Striker': striker_df,
-    'Centre-Back': cb_df,
-    'Right Winger': wi_df,
-    'Left Winger': wi_df
-}
 
-position_to_df = {
-    'Right-Back': fb_df,
-    'Left-Back': fb_df,
-    'Left WingBack': fb_df,
-    'Right WingBack': fb_df,
-    'Defensive Midfield': dm_df,
-    'Goalkeeper': gk_df,
-    'Central Midfield': cm_df,
-    'Attacking Midfield': am_df,
-    'Centre-Forward': striker_df,
-    'Second Striker': striker_df,
-    'Centre-Back': cb_df,
-    'Right Winger': wi_df,
-    'Left Winger': wi_df
+position_to_abbrevations = {
+    'Right-Back': fb,
+    'Left-Back': fb,
+    'Left WingBack': fb,
+    'Right WingBack': fb,
+    'Defensive Midfield': dm,
+    'Goalkeeper': gk,
+    'Central Midfield': cm,
+    'Attacking Midfield': am,
+    'Centre-Forward': striker,
+    'Second Striker': striker,
+    'Centre-Back': cb,
+    'Right Winger': wi,
+    'Left Winger': wi
 }
