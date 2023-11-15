@@ -5,7 +5,7 @@ from abbrevation import fb, dm, gk, cm, am, striker, cb, wi, position_to_abbreva
 
 # Create a Streamlit app
 st.title("Find Similar Players")
-
+ 
 fb_df = pd.read_csv(r"FInal_DF/fb.csv")
 dm_df = pd.read_csv(r"FInal_DF/dm.csv")
 gk_df = pd.read_csv(r"FInal_DF/gk.csv")
