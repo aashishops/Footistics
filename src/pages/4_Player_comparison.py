@@ -1,7 +1,7 @@
 from comparison import player_vs_player_comparison
 import pandas as pd
 import streamlit as st
-from abbrevation import fb_df,dm_df,gk_df,cm_df,am_df,striker_df,cb_df,wi_df,position_to_abbreviations
+from abbrevation import fb,dm,gk,cm,am,striker,cb,wi,position_to_abbrevations
 
 st.set_page_config(
     page_title="Footistcs",
@@ -55,8 +55,8 @@ else:
         st.plotly_chart(fig)
 
         # Get the corresponding abbreviation dictionaries for the selected players
-        player1_abbreviations = position_to_abbreviations.get(player1_position, {})
-        player2_abbreviations = position_to_abbreviations.get(player2_position, {})
+        player1_abbreviations = position_to_abbrevations.get(player1_position, {})
+        player2_abbreviations = position_to_abbrevations.get(player2_position, {})
 
         # Print the abbreviations for the selected players
         st.write(f"Abbreviations for {player1_name} ({player1_position}):")
