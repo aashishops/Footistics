@@ -49,6 +49,7 @@ player_position = ps_df.loc[ps_df["Player"] == player_name, "Position"].iloc[0]
 abbreviation_dict = position_to_df.get(player_position, {})
 
 
+
 # Perform the rest of your code for single player comparison
 fig = single_player_comparison(player_name, ps_df, position_to_df)
 st.plotly_chart(fig)
