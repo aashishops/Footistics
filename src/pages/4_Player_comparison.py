@@ -53,5 +53,18 @@ else:
     if player1_position == player2_position:
         fig = player_vs_player_comparison(player1_name, player2_name, ps_df, position_to_df)
         st.plotly_chart(fig)
+
+        # Get the corresponding abbreviation dictionaries for the selected players
+        player1_abbreviations = position_to_abbreviations.get(player1_position, {})
+        player2_abbreviations = position_to_abbreviations.get(player2_position, {})
+
+        # Print the abbreviations for the selected players
+        st.write(f"Abbreviations for {player1_name} ({player1_position}):")
+        for key, value in player1_abbreviations.items():
+            st.write(f"{key} - {value}")
+
+        st.write(f"Abbreviations for {player2_name} ({player2_position}):")
+        for key, value in player2_abbreviations.items():
+            st.write(f"{key} - {value}")
     else:
         st.warning("Select players of the same position for comparison.")
