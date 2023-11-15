@@ -1,6 +1,8 @@
 from comparison import player_vs_player_comparison
 import pandas as pd
 import streamlit as st
+from abbrevation import fb_df,dm_df,gk_df,cm_df,am_df,striker_df,cb_df,wi_df,position_to_abbreviations
+
 st.set_page_config(
     page_title="Footistcs",
     page_icon="⚽",
@@ -33,6 +35,7 @@ position_to_df = {
     'Right Winger': wi_df,
     'Left Winger': wi_df
 }
+
 
 st.title("1v1 Player Comparison")
 
