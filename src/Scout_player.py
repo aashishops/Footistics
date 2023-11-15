@@ -7,7 +7,6 @@ def find_and_plot_similar_players(data_file, player_name, k=5):
     # Load your DataFrame with player stats
 
     # Remove the "Position" and "Unnamed: 0" columns from the DataFrame
-    player_df = player_df.drop("Position", axis=1)
     player_df = player_df.drop("Unnamed: 0", axis=1)
 
     # Exclude non-numeric columns like player names
