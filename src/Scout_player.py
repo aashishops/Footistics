@@ -8,6 +8,7 @@ def find_and_plot_similar_players(player_df, player_name, k=5):
     if "Position" in player_df.columns:
         # Drop the "Position" column
         player_df = player_df.drop("Position", axis=1, errors='ignore')
+        player_df = player_df.drop("SDist", axis=1, errors='ignore')
 
     # Check if "Unnamed: 0" column exists in the DataFrame
     if "Unnamed: 0" in player_df.columns:
