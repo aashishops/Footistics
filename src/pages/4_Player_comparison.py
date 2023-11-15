@@ -59,9 +59,8 @@ else:
         player2_abbreviations = position_to_abbrevations.get(player2_position, {})
 
         # Print the abbreviations for the selected players
-        st.write(f"Abbreviations for ({player1_position}):")
+        st.write(f"Abbreviations for {player1_name} and {player2_name} ({player1_position}):")
         for key, value in player1_abbreviations.items():
             st.write(f"{key} - {value}")
-
     else:
         st.warning("Select players of the same position for comparison.")
