@@ -5,7 +5,6 @@ from sklearn.neighbors import NearestNeighbors
 
 def find_and_plot_similar_players(data_file, player_name, k=5):
     # Load your DataFrame with player stats
-    player_df = pd.read_csv(data_file)
 
     # Remove the "Position" and "Unnamed: 0" columns from the DataFrame
     player_df = player_df.drop("Position", axis=1)
